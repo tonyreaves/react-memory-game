@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.css";
+import "./pugCard.css";
 
 const pugCard = props => (
   <div className="card">

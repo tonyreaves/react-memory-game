@@ -1,0 +1,50 @@
+[
+  {
+    "name": "pug1",
+    "image": "../public/img/pug1.jpg"
+  },
+  {
+    "name": "pug1",
+    "image": "../public/img/pug2.jpg"
+  },
+  {
+    "name": "pug3",
+    "image": "../public/img/pug3.jpg"
+  },
+  {
+    "name": "pug4",
+    "image": "../public/img/pug4.jpg"
+  },
+  {
+    "name": "pug5",
+    "image": "../public/img/pug5.jpeg"
+  },
+  {
+    "name": "pug6",
+    "image": "../public/img/pug6.jpg"
+  },
+  {
+    "name": "pug7",
+    "image": "../public/img/pug7.jpg"
+  },
+  {
+    "name": "pug8",
+    "image": "../public/img/pug8.jpeg"
+  },
+  {
+    "name": "pug9",
+    "image": "../public/img/pug9.jpeg"
+  },
+  {
+    "name": "pug10",
+    "image": "../public/img/pug10.png"
+  },
+  {
+    "name": "pug11",
+    "image": "../public/img/pug11.jpg"
+  },
+  {
+    "name": "pug12",
+    "image": "../public/img/pug12.jpg"
+  }
+]

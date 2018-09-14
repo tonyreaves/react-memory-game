@@ -5,8 +5,13 @@ import "../App.css";
 const Nav = props => (
   <nav className="nav">
     <p>Memory Game</p>
-    <p>Click an image to begin!</p> <p>Score: 0 | Top Score: 0</p>
+    <p>{/* Score: {state.score} | Top Score: {state.topScore} */}</p>
   </nav>
 );
+
+// handleIncrement = () => {
+//   // We always use the setState method to update a component's state
+//   this.setState({ count: this.state.count + 1 });
+// };
 
 export default Nav;
