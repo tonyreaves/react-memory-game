@@ -1,0 +1,7 @@
+nav {
+  background: black;
+  color: aliceblue;
+  display: flex;
+  height: 2rem;
+  width: 100%;
+}
