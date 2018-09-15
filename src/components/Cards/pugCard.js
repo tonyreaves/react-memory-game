@@ -1,13 +1,14 @@
 import React from "react";
 import "./pugCard.css";
+import "../../pugs.json";
 
-const pugCard = props => (
+const PugCard = props => (
   <div className="card">
-    <div className="img-container">
+    <div onClick={() => props.setClicked(props.id)} className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
     <div className="content" />
   </div>
 );
 
-export default pugCard;
+export default PugCard;

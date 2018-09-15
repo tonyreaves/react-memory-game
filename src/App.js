@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Nav from "./components/Nav/Nav";
-import pugCard from "./components/Cards/pugCard";
+import PugCard from "./components/Cards/PugCard";
 import pugs from "./pugs.json";
 import Body from "./components/Body/body";
 import Wrapper from "./components/Wrapper/Wrapper";
@@ -20,23 +20,25 @@ class App extends Component {
     pugsLeft
   };
 
-  state = {
-    pugs
-  };
-
   render() {
     return (
       <div>
-        <Nav />
+        <Nav message={message} score={score} topScore={topScore} />
         <Wrapper>
           <Body>
-            {this.state.pugs.map(pugs => (
-              <pugCard key={pugs.name} name={pugs.name} image={pugs.image} />
+            {this.state.pugs.map(pug => (
+              <PugCard key={pug.name} image={pug.image} />
             ))}
           </Body>
         </Wrapper>
       </div>
     );
+  }
+
+  setClicked() {
+    {
+      this.state.pugs.clicked = true;
+    }
   }
 }
 
