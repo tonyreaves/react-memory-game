@@ -1,19 +1,22 @@
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 8rem;
+  height: 8.5rem;
   margin: 1rem;
   position: relative;
-  width: 8rem;
+  width: 8.5rem;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }
 
 .card > .img-container {
-  height: 7.8rem;
+  height: 8.3rem;
   overflow: hidden;
   background: #6caddc;
 }
 .card > .img-container > img {
   width: 100%;
+}
+
+card:hover {
 }
