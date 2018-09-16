@@ -2,7 +2,7 @@ nav {
   background: black;
   color: blueviolet;
   display: flex;
-  height: 3rem;
+  height: 5rem;
   width: 100%;
   font-size: 1.6rem;
 }
@@ -11,4 +11,20 @@ nav {
   font-size: 2rem;
   text-align: left;
   color: aliceblue;
+  width: 25%;
+}
+
+#scores {
+  text-align: left;
+  width: 30%;
+}
+
+.scoreNum {
+  font-size: 1.8rem;
+  color: red;
+}
+
+#message {
+  width: 45%;
+  text-align: center;
 }

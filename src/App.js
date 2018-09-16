@@ -15,7 +15,8 @@ class App extends Component {
     message,
     topScore,
     score,
-    pugs
+    pugs,
+    clickedPugs: []
   };
 
   render() {
@@ -25,7 +26,12 @@ class App extends Component {
         <Wrapper>
           <Body>
             {this.state.pugs.map(pug => (
-              <PugCard key={pug.name} image={pug.image} />
+              <PugCard
+                key={pug.name}
+                image={pug.image}
+                clicked={this.clicked}
+                id={pug.id}
+              />
             ))}
           </Body>
         </Wrapper>
@@ -34,33 +40,60 @@ class App extends Component {
   }
 
   clicked = id => {
-    this.state.pugs.find((o, i) => {
-      if (o.id === id) {
-        if (pugs[i].pugs === 0) {
-          pugs[i].pugs = pugs[i].count + 1;
-          this.setState({ score: this.state.score + 1 }, function() {
-            console.log(this.state.score);
-          });
-          this.state.pugs.sort(() => Math.random() - 0.5);
-          return true;
-        } else {
-          this.gameEnd();
-        }
-      }
-    });
+    console.log({ id });
+    const { clickedPugs } = this.state;
+    const indexOfFoundPug = clickedPugs.findIndex(
+      clickedPugIndex => clickedPugIndex === id
+    );
+
+    // if it has not found a pug
+    if (-1 === indexOfFoundPug) {
+      const updatedClickedPugs = [id, ...clickedPugs];
+      this.setState({ clickedPugs: updatedClickedPugs }, () => {
+        // this.state.pugs.sort(() => Math.random() - 0.5);
+        this.setState(prevState => ({
+          ...prevState,
+          pugs: prevState.pugs.sort(() => Math.random() - 0.5)
+        }));
+        this.setState({ score: this.state.score + 1 });
+        console.log(this.state.score);
+      });
+
+      return;
+    }
+
+    this.gameEnd();
+    // this.state.pugs.find((o, i) => {
+    //   if (o.id === id) {
+    //     alert("you have a match!");
+    //     // if (pugs[i].pugs === 0) {
+    //     //   pugs[i].pugs = pugs[i].count + 1;
+    //     //   this.setState({ score: this.state.score + 1 }, function() {
+    //     //     console.log(this.state.score);
+    //     //   });
+    //     //   this.state.pugs.sort(() => Math.random() - 0.5);
+    //     //   return;
+    //     // }
+    //     // this.gameEnd();
+    //   } else {
+    //     alert(`you clicked ${id}`);
+    //   }
+    // });
   };
+
   gameEnd = () => {
     if (this.state.score > this.state.topScore) {
-      this.setState({ highscore: this.state.score }, function() {
+      this.setState({ topScore: this.state.score }, function() {
         console.log(this.state.topScore);
+        alert(`New high score! ${this.state.score}`);
       });
+      this.state.pugs.forEach(pug => {});
+      this.setState({ clickedPugs: [] });
+    } else {
+      this.setState.PugCard = { animation: "shake 0.5s" };
+      alert(`Game Over  \nscore: ${this.state.score}`);
     }
-    this.state.pugs.forEach(pug => {
-      pug.count = 0;
-    });
-    alert(`Game Over :( \nscore: ${this.state.score}`);
-    this.setState({ score: 0 });
-    return true;
+    return this.setState({ score: 0 });
   };
 }
 export default App;

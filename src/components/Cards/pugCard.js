@@ -1,13 +1,11 @@
 import React from "react";
 import "./pugCard.css";
-import "../../pugs.json";
 
 const PugCard = props => (
-  <div className="card">
-    <div onClick={() => props.clicked(props.id)} className="img-container">
+  <div className="card" onClick={() => props.clicked(props.id)}>
+    <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
-    <div className="content" />
   </div>
 );
 
