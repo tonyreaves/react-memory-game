@@ -1,62 +1,58 @@
 [
   {
+    "id": 1,
     "name": "pug1",
-    "image": "/img/pug1.jpg",
-    "clicked": false
+    "image": "/img/pug1.jpg"
   },
+  { "id": 2, "name": "pug2", "image": "/img/pug2.jpg" },
   {
-    "name": "pug2",
-    "image": "/img/pug2.jpg",
-    "clicked": false
-  },
-  {
+    "id": 3,
     "name": "pug3",
-    "image": "/img/pug3.jpg",
-    "clicked": false
+    "image": "/img/pug3.jpg"
   },
   {
+    "id": 4,
     "name": "pug4",
-    "image": "/img/pug4.jpg",
-    "clicked": false
+    "image": "/img/pug4.jpg"
   },
   {
+    "id": 5,
     "name": "pug5",
-    "image": "/img/pug5.jpeg",
-    "clicked": false
+    "image": "/img/pug5.jpeg"
   },
   {
+    "id": 6,
     "name": "pug6",
-    "image": "/img/pug6.jpg",
-    "clicked": false
+    "image": "/img/pug6.jpg"
   },
   {
+    "id": 7,
     "name": "pug7",
-    "image": "/img/pug7.jpg",
-    "clicked": false
+    "image": "/img/pug7.jpg"
   },
   {
+    "id": 8,
     "name": "pug8",
-    "image": "/img/pug8.jpeg",
-    "clicked": false
+    "image": "/img/pug8.jpeg"
   },
   {
+    "id": 9,
     "name": "pug9",
-    "image": "/img/pug9.jpeg",
-    "clicked": false
+    "image": "/img/pug9.jpeg"
   },
   {
+    "id": 10,
     "name": "pug10",
-    "image": "/img/pug10.png",
-    "clicked": false
+    "image": "/img/pug10.png"
   },
   {
+    "id": 11,
     "name": "pug11",
-    "image": "/img/pug11.jpg",
-    "clicked": false
+    "image": "/img/pug11.jpg"
   },
   {
+    "id": 12,
     "name": "pug12",
-    "image": "/img/pug12.jpg",
-    "clicked": false
+    "image": "/img/pug12.jpg"
   }
 ]

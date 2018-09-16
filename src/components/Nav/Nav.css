@@ -1,7 +1,14 @@
 nav {
   background: black;
-  color: aliceblue;
+  color: blueviolet;
   display: flex;
-  height: 2rem;
+  height: 3rem;
   width: 100%;
+  font-size: 1.6rem;
+}
+
+#appName {
+  font-size: 2rem;
+  text-align: left;
+  color: aliceblue;
 }

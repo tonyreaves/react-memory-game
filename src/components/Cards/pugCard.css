@@ -1,22 +1,32 @@
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 8.5rem;
+  height: 9rem;
   margin: 1rem;
   position: relative;
-  width: 8.5rem;
+  width: 9rem;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
+  background: #55231c;
 }
 
 .card > .img-container {
-  height: 8.3rem;
+  height: 8.8rem;
   overflow: hidden;
-  background: #6caddc;
 }
 .card > .img-container > img {
   width: 100%;
 }
 
-card:hover {
+.card:hover,
+.card.click-item {
+  cursor: pointer;
+}
+
+.card.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.2);
 }

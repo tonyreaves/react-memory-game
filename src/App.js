@@ -9,15 +9,13 @@ import Wrapper from "./components/Wrapper/Wrapper";
 let message = "Click an image to begin!";
 let topScore = 0;
 let score = 0;
-let pugsLeft = 12;
 
 class App extends Component {
   state = {
     message,
     topScore,
     score,
-    pugs,
-    pugsLeft
+    pugs
   };
 
   render() {
@@ -35,11 +33,34 @@ class App extends Component {
     );
   }
 
-  setClicked() {
-    {
-      this.state.pugs.clicked = true;
+  clicked = id => {
+    this.state.pugs.find((o, i) => {
+      if (o.id === id) {
+        if (pugs[i].pugs === 0) {
+          pugs[i].pugs = pugs[i].count + 1;
+          this.setState({ score: this.state.score + 1 }, function() {
+            console.log(this.state.score);
+          });
+          this.state.pugs.sort(() => Math.random() - 0.5);
+          return true;
+        } else {
+          this.gameEnd();
+        }
+      }
+    });
+  };
+  gameEnd = () => {
+    if (this.state.score > this.state.topScore) {
+      this.setState({ highscore: this.state.score }, function() {
+        console.log(this.state.topScore);
+      });
     }
-  }
+    this.state.pugs.forEach(pug => {
+      pug.count = 0;
+    });
+    alert(`Game Over :( \nscore: ${this.state.score}`);
+    this.setState({ score: 0 });
+    return true;
+  };
 }
-
 export default App;
